@@ -1,0 +1,27 @@
+
+<!-- {{ tableData | json}} -->
+<table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Employee Code</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Avatar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of tableData">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.empcode }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.phone }}</td>
+        <td>
+          <img [src]="employee.email" alt="Avatar" class="img-thumbnail" width="50" height="50">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
